@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bloom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <script src="registration.js"></script>
+</head>
+<body>
+        <header class = "header">
+                assignment 5
+            </header>
+            <section class = "left">
+                <h4>Navigation</h4>>
+                <a href="index.html">Index</a><br>
+                <a href="registration.html">Regestration Form</a>
+            </section>
+            <section>
+                    <form class = "center" name="signup" method="POST" action="https://httpbin.org/post" onsubmit="return validate();">
+                        <p>
+                            First name:
+                            <input id="fName" name="fName" autocomplete="off" required minlength="1" maxlength="15" type="text">
+                        </p>
+                        <p>
+                            Last Name:
+                            <input id="lName" name="lName" autocomplete="off" required minlength="1" maxlength="15" type="text">
+                        </p>
+                        <p>
+                            Unit #:
+                            <input id="unit" name="unit" autocomplete="off" required minlength="1" maxlength="4" type="text">
+                        </p>
+                        <p>
+                            Street #:
+                            <input id="streetNum" name="streetNum" autocomplete="off" required minlength="1" maxlength="4" type="text">
+                        </p>
+                        <p>
+                            Street Name:
+                            <input id="streetName" name="streetName" autocomplete="off" required minlength="5" maxlength="15" type="text">
+                        </p>
+                        <p>
+                            City:
+                            <input id="city" name="city" autocomplete="off" required minlength="5" maxlength="20" type="text">
+                        </p>
+                        <p>
+                            Province:
+                            <select id="province" name="province">
+                                <option value="1">Alberta</option>
+                                <option value="2">British Columbia</option>
+                                <option value="3">Manitoba</option>
+                                <option value="4">New Brunswick</option>
+                                <option value="5">Nova Scotia</option>
+                                <option value="6" selected="">Ontario</option>
+                                <option value="7">Quebec</option>
+                                <option value="8">Saskatchewan</option>
+                            </select>
+                        </p>
+                        <p>
+                            Postal Code:
+                            <input id="postalCode" name="postalCode" autocomplete="off" required minlength="6" maxlength="6" type="text">
+                        </p>
+                        <p>
+                            Phone number:
+                            <input id="phone" name="phone" autocomplete="off" placeholder="###-###-####" required minlength="10" maxlength="15" type="tel">
+                        </p>
+                        <p>
+                            Email:
+                            <input id="email" name="email" autocomplete="off" required type="email">
+                        </p>
+                        <p>
+                            User Name:
+                            <input id="user" name="user" autocomplete="off" required minlength="6" maxlength="16" type="text">
+                        </p>
+                        <p>
+                            Password:
+                            <input id="pass" name="pass" autocomplete="off" required minlength="8" maxlength="16" type="password">
+                        </p>
+                        <p>
+                            Password:
+                            <input id="secondPass" name="sPass" autocomplete="off" required minlength="8" maxlength="16" type="password">
+                        </p>
+                        <div id="errors"></div>
+                        <br>
+                        <p>
+                            <input value="Signup" type="submit">
+                            <input value="Clear" type="reset" onclick="clearErrors();">
+                        </p>
+                    </form>
+            </section>
+            <input type="hidden" name="lastName" id="lastName" value="Bloom" /> 
+            <input type="hidden" name="studentId" id="studentId" value="#########" /> 
+
+            <section class = "right">
+                <p>
+                    This is the form page. Please fill out the form for submission.
+                </p>
+            </section>
+            <footer class="footer">
+                &copy; Jaron Bloom
+            </footer>
+</body>
+</html>
